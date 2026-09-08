@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Большой тест: Кто ты из «Сплетницы»?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Фоновые анимации: падающие XOXO и золотые мерцающие блестяшки -->
+    <div id="xoxo-bg"></div>
+    <div id="sparkles-bg"></div>
+
+    <div class="test-container">
+        <!-- Стартовый экран -->
+        <div id="start-screen" class="screen active">
+            <div class="banner-img">
+                <!-- Ссылка на картинку для главной страницы -->
+                <img src="https://avatars.mds.yandex.net/i?id=0cfffae414d62f8b3528a914269c26ad8075c448-5234137-images-thumbs&n=13" alt="Главное фото">
+            </div>
+            <h1>XOXO, Сплетница 🍂</h1>
+            <p>Глубокий осенний тест из 20 вопросов. Узнай своё настоящее альтер-эго среди элиты Манхэттена!</p>
+            <button class="btn-primary" onclick="startTest()">Пройти тест</button>
+        </div>
+
+        <!-- Экран с вопросами -->
+        <div id="quiz-screen" class="screen">
+            <div class="progress-bar">
+                <div id="progress" class="progress-fill"></div>
+            </div>
+            <div class="question-img-wrap">
+                <!-- Картинка для текущего вопроса подставится автоматически из массива в script.js -->
+                <img id="question-img" src="" alt="Иллюстрация к вопросу">
+            </div>
+            <h2 id="question-text">Вопрос</h2>
+            <div id="options-container" class="options-grid"></div>
+        </div>
+
+        <!-- Экран результатов -->
+        <div id="result-screen" class="screen">
+            <h2>Твое альтер-эго на Манхэттене:</h2>
+            <div class="result-card">
+                <!-- Ссылка на картинку результата подставится автоматически из объекта resultsData в script.js -->
+                <img id="result-img" src="" alt="Результат">
+                <h3 id="result-title"></h3>
+                <p id="result-desc"></p>
+            </div>
+            <button class="btn-primary" onclick="restartTest()">Пройти снова</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
